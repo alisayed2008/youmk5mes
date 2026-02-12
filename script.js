@@ -79,8 +79,8 @@ function render() {
         <div class="poster-wrap">
           <img src="${g.image}" alt="${g.title}" loading="lazy" />
           <span class="size-chip">${g.size}m</span>
+          <span class="game-title">${g.title}</span>
         </div>
-        <span class="game-title">${g.title}</span>
         <button class="download-btn" data-link="${g.link}" data-title="${g.title}">تحميل↜</button>
       </article>`
     )
