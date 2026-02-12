@@ -1,0 +1,43 @@
+:root{--glass:rgba(255,255,255,.21);--stroke:rgba(255,255,255,.48)}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Tajawal","Cairo",sans-serif;color:#fff;overflow-x:hidden;background:#171a22}
+.bg-gif{position:fixed;inset:0;background:url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHc0bzJycnQ2NjM0NXJ5eGJtbTZ4MzN0N3N6bHczYm9sM3M1NXY4eiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YQitE4YNQNahy/giphy.gif") center/cover no-repeat;z-index:-2;filter:saturate(.95)}
+.bg-gif:after{content:"";position:absolute;inset:0;background:rgba(15,19,26,.46)}
+.glass-panel{width:min(1090px,88vw);margin:12px auto;padding:20px 18px;border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(140deg,rgba(255,255,255,.28),rgba(255,255,255,.09));backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.top-area{display:flex;justify-content:space-between;align-items:flex-start}
+.brand-block{display:flex;align-items:center;gap:10px}
+.logo-img{width:56px;height:56px;object-fit:cover;border:none;border-radius:0}
+.title-img{width:min(300px,48vw);height:auto}
+.coffee-btn img{width:155px}
+.video-wrap{width:min(690px,100%);margin:12px auto 10px 26px;padding:16px;border-radius:24px;background:linear-gradient(130deg,rgba(239,165,62,.82),rgba(183,116,44,.73));border:1px solid rgba(255,221,179,.7)}
+.video-inner{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 0 40px rgba(0,0,0,.25)}
+video{width:100%;height:356px;display:block;object-fit:cover}
+.play-toggle,.restart-pill,.restart-circle,.drop-trigger,.drop-menu button,.game-title,.download-btn,.size-chip,.page-btn{border:1px solid rgba(255,255,255,.6);background:linear-gradient(150deg,rgba(255,255,255,.35),rgba(255,255,255,.12));backdrop-filter:blur(11px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 10px rgba(0,0,0,.17);transition:transform .2s ease,filter .2s ease}
+.play-toggle:hover,.restart-pill:hover,.restart-circle:hover,.drop-trigger:hover,.drop-menu button:hover,.download-btn:hover,.page-btn:hover{transform:translateY(-1px);filter:brightness(1.07)}
+.restart-pill{position:absolute;left:14px;top:8px;border-radius:999px;padding:3px 14px;font-size:24px;font-family:"Changa",sans-serif;font-weight:700;color:#ece7dc}
+.restart-circle{position:absolute;left:158px;top:8px;width:34px;height:34px;border-radius:50%;font-size:20px;color:#ede8de}
+.play-toggle{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);border-radius:999px;padding:1px 24px;font-size:40px;font-family:"Changa",sans-serif;color:#f8f6ef}
+.section-divider{width:78%;margin:16px auto;border:none;border-top:2px solid rgba(255,255,255,.65)}
+.filters{display:grid;grid-template-columns:repeat(3,260px);justify-content:center;gap:28px;margin-bottom:8px}
+.dropdown{position:relative}
+.drop-trigger{width:100%;border-radius:16px;padding:9px 10px;font-size:52px;font-family:"Changa",sans-serif;font-weight:600;color:#f3f3f3}
+.drop-menu{position:absolute;inset-inline:0;top:calc(100% + 8px);display:none;flex-direction:column;gap:7px;padding:10px;background:rgba(7,7,7,.9);border:1px solid rgba(255,255,255,.3);border-radius:18px;z-index:5}
+.dropdown.open .drop-menu{display:flex}
+.drop-menu button{font-family:"Cairo",sans-serif;border-radius:10px;font-size:20px;color:#fff;background:rgba(255,255,255,.1)}
+.games-grid{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.game-card{display:flex;flex-direction:column;gap:8px}
+.poster-wrap{position:relative;height:338px;border:1px solid rgba(255,255,255,.58);background:rgba(255,255,255,.09)}
+.poster-wrap img{width:100%;height:100%;object-fit:cover;opacity:.37;filter:blur(.35px)}
+.size-chip{position:absolute;right:8px;top:8px;min-width:58px;border-radius:999px;font-size:20px;text-align:center;color:#222;font-family:"Cairo",sans-serif;font-weight:700}
+.game-title{position:absolute;left:12px;right:12px;bottom:12px;border-radius:999px;text-align:center;font-size:47px;color:#151515;font-family:"Changa",sans-serif;font-weight:700;line-height:1.1;padding:0 0 1px}
+.download-btn{width:100%;border-radius:0;padding:4px 8px;font-size:46px;color:#111;font-family:"Tajawal",sans-serif}
+.pager{margin:18px auto 0;display:flex;width:fit-content;border:1px solid rgba(255,255,255,.55)}
+.page-btn{width:58px;border-radius:0;border-inline-start:1px solid rgba(255,255,255,.55);font-size:42px;color:#111;font-family:"Tajawal",sans-serif}
+.page-btn.active{background:rgba(255,255,255,.44);color:#fff}
+.toast{position:fixed;right:10px;top:45%;max-width:325px;padding:11px;border-radius:14px;border:1px solid rgba(255,255,255,.58);background:linear-gradient(140deg,rgba(255,255,255,.46),rgba(148,148,148,.26));backdrop-filter:blur(11px);opacity:0;transform:translateX(45px);transition:.3s}
+.toast.show{opacity:1;transform:translateX(0)}
+.floating{position:fixed;z-index:3;pointer-events:none;filter:drop-shadow(0 6px 12px rgba(0,0,0,.42));transition:transform .2s linear}
+.f1{width:220px;right:-40px;top:280px}.f2{width:170px;left:-20px;top:560px}.f3{width:185px;right:-28px;top:860px}.f4{width:125px;left:2px;top:1040px}
+@media (max-width:1200px){.glass-panel{width:94vw}.drop-trigger{font-size:36px}.game-title{font-size:34px}.download-btn{font-size:33px}.page-btn{font-size:30px;width:46px}}
+@media (max-width:860px){.top-area{flex-direction:column-reverse;align-items:center}.video-wrap{margin:10px auto}.filters{grid-template-columns:1fr;gap:12px}.games-grid{grid-template-columns:repeat(2,1fr)}video{height:270px}.floating{opacity:.75}}
+@media (max-width:560px){.games-grid{grid-template-columns:1fr}.floating{opacity:.4}.drop-trigger{font-size:28px}.game-title{font-size:28px}.download-btn{font-size:28px}}

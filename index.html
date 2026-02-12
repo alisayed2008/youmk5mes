@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحة تحميل ألعاب - يوم خميس</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Changa:wght@500;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-gif" aria-hidden="true"></div>
+
+    <main class="glass-panel">
+      <header class="top-area">
+        <div class="brand-block">
+          <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Blue_marble_west.jpg/200px-Blue_marble_west.jpg" alt="Logo" />
+          <img class="title-img" src="title-badge.svg" alt="يوم خميس" />
+        </div>
+
+        <a class="coffee-btn" href="https://www.buymeacoffee.com" target="_blank" rel="noreferrer">
+          <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" />
+        </a>
+      </header>
+
+      <section class="video-wrap liquid-orange">
+        <div class="video-inner">
+          <button class="restart-pill" id="restartVideo">إعادة تشغيل</button>
+          <button class="restart-circle" id="restartIcon" aria-label="اعادة تشغيل">↺</button>
+          <video id="heroVideo" preload="metadata" poster="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=60" src="https://cdn.pixabay.com/video/2022/10/22/136047-763065113_large.mp4"></video>
+          <button class="play-toggle" id="togglePlay">تشغيل</button>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="filters" aria-label="فلاتر الألعاب">
+        <div class="dropdown" data-filter="type">
+          <button class="drop-trigger">النوع</button>
+          <div class="drop-menu">
+            <button data-value="all">الكل</button><button data-value="2d">ثنائي الأبعاد</button><button data-value="3d">ثلاثي الأبعاد</button><button data-value="story">قصة</button><button data-value="war">حرب</button><button data-value="cars">سيارات</button>
+          </div>
+        </div>
+        <div class="dropdown" data-filter="era">
+          <button class="drop-trigger">الزمن</button>
+          <div class="drop-menu">
+            <button data-value="all">الكل</button><button data-value="98">98</button><button data-value="xp">XP</button><button data-value="7">7</button>
+          </div>
+        </div>
+        <div class="dropdown" data-filter="sort">
+          <button class="drop-trigger">الترتيب</button>
+          <div class="drop-menu">
+            <button data-value="default">الافتراضي</button><button data-value="alpha">أبجدي</button><button data-value="size">الحجم</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="games-grid" id="gamesGrid"></section>
+      <nav class="pager" id="pager"></nav>
+    </main>
+
+    <div class="toast" id="toastMsg"></div>
+
+    <img class="floating f1" src="https://pngimg.com/d/child_PNG17763.png" alt="عنصر جانبي" />
+    <img class="floating f2" src="https://pngimg.com/d/cartoon_character_PNG8.png" alt="عنصر جانبي" />
+    <img class="floating f3" src="https://pngimg.com/d/boy_PNG84.png" alt="عنصر جانبي" />
+    <img class="floating f4" src="https://pngimg.com/d/frame_PNG47.png" alt="عنصر جانبي" />
+
+    <script src="script.js"></script>
+  </body>
+</html>
